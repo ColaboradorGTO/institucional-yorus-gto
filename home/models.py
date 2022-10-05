@@ -7,7 +7,8 @@ from stdimage.models import StdImageField
 from django.utils.text import slugify 
 
 # Ckeditor 
-from ckeditor.fields import RichTextField 
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
@@ -30,7 +31,7 @@ class Blog(models.Model):
     subtitle = models.CharField('Subtítulo', max_length=255)
     slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     image = StdImageField('Imagem', upload_to='Blog', variations={'thumb': {'width': 1595, 'height': 824, 'crop': True }})  
-    content = RichTextField('Conteúdo', )
+    content = RichTextUploadingField('Conteúdo', )
 
     def __str__(self):
         return self.title 
