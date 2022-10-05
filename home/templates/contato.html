@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato - Yorus</title>
+
+    {% include 'includes/css.html' %}
+
+</head>
+
+<body>
+    
+    <header class="header-page">
+        
+        {% include 'includes/header.html' %}
+
+        <div class="container">
+            <div class="header-wrap">
+                <h2 class="header-title" data-aos="fade-up" data-aos-delay="500">Contato</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="section is-sm">
+        <div class="container">
+
+            <div class="boxes">
+                <div class="row min-30">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box has-shadow has-left-icon">
+                            <div class="box-particles2"></div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="box-icon">
+                                        <ion-icon name="code-download-outline" role="img" class="md hydrated" aria-label="code download outline"></ion-icon>                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="box-title">Endereço</h3>
+                                    <p class="box-desc">
+                                        St. G Norte CNG 2 Lote 01 - Loja - Taguatinga, Brasília - DF, 72130-025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box has-shadow has-left-icon">
+                            <div class="box-particles2"></div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="box-icon">
+                                        <ion-icon name="bookmarks-outline" role="img" class="md hydrated" aria-label="bookmarks outline"></ion-icon>                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="box-title">Telefone</h3>
+                                    <p class="box-desc">
+                                        +55 (61) 3042-2241
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box has-shadow has-left-icon">
+                            <div class="box-particles2"></div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="box-icon">
+                                        <ion-icon name="rocket-outline" role="img" class="md hydrated" aria-label="rocket outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="box-title">E-mail</h3>
+                                    <p class="box-desc">
+                                        contato@yorus.com.br
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================== section contact -->
+    <section class="section is-sm section-contact section-grey">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+
+                <div class="col-lg-6">
+                    <div class="section-head">
+                        <h2 class="section-title text-center ">Entre em contato</h2>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label>Departamento</label>
+                            <select required="" name="service-requested" class="form-control has-style1 " id="service">
+                                <option value="">Select</option>
+                                <option value="Logo Design">Logo Design</option>
+                                <option value="Sound Branding">Sound Branding</option>
+                                <option value="Front-End Development">Front-End Development</option>
+                                <option value="Marketing Digital">Marketing Digital</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Seu nome</label>
+                            <input name="email" placeholder="Angelina " class="form-control has-style1" id="how"
+                                type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input name="email" placeholder=" example@mail.com" class="form-control has-style1" id="how"
+                                type="text">
+                        </div>
+                        <label>Sua dúvida</label>
+                        <textarea name="textarea" class="textarea has-style1" placeholder="Como podemos ajudar?"></textarea>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-round">
+                                <span> Enviar → </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/js.html' %}
+
+</body>
+
+</html>

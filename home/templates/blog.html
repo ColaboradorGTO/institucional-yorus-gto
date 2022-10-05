@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog yorus</title>
+
+
+    {% include 'includes/css.html' %}
+    
+</head>
+
+<body>
+    
+    <!-- =========================== header-->
+    <header class="header-page">
+        
+        {% include 'includes/header.html' %}
+
+        <div class="container">
+            <div class="header-wrap">
+                <h2 class="header-title" data-aos="fade-up" data-aos-delay="500">Confira as útimas novidades</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================= Section Blog -->
+    <section class="section is-sm section-blog2">
+        <div class="container">
+            <div class="row">
+               
+
+                {% for blog in blog_list %}
+                <!--  blog item -->
+                <div class="col-lg-4">
+                    <div class="card-blog">
+                        <a href="#">
+                            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-blog">
+                        </a>
+                        <div class="card-blog-wrap">
+                            <a href="#">
+                                <h4 class="title-blog">{{ blog.title }}</h4>
+                            </a>
+                            <p class="desc-blog">{{ blog.content }}</p>
+                            <div class="meta-blog">
+                                <span class="author">By <a href="" title="Posts by ayoub" rel="author">ayoub
+                                        creabik</a></span>
+                                <span class="date">7 minute ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+            </div>
+            <div class="flex center">
+                <div class="load-more">
+                    <span> Load More articles </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/js.html' %}
+    
+</body>
+
+</html>

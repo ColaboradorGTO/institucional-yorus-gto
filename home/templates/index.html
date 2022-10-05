@@ -1,0 +1,421 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Yorus - Lojas Yorus Brasília - conheça nossa loja</title>
+    
+    {% include 'includes/css.html' %}
+    
+</head>
+
+<body>
+
+
+    <!-- =========================== header-->
+    <header class="header has-style-bg" style="background-image: url({% static 'assets/images/baner.jpg' %});">
+        <!-- =========================== navbar-->
+        <nav class="navbar">
+            <div class="container">
+                <div class="flex">
+                    <!-- <img src="{% static 'assets/yorus.svg' %}" width="100" height="50"> -->
+                    <a href="/" class=" text-white navbar-brand flex vcenter" href="#"><!-- <img
+                            data-aos="fade-right" class="logo" src="{% static 'assets/yorus.svg' %}" alt="" width="300" height="200" /> --> 
+                            <img src="{% static 'assets/yorus.svg' %}" width="150" height="80">
+                        </a> 
+
+                    <ul class="navbar-menu">
+                        <li data-aos="fade-left" data-aos-delay="100">
+                            <a class="fade-page" href="/">Início</a>
+                        </li>
+                        <li data-aos="fade-left" data-aos-delay="100">
+                            <a class="fade-page" href="/sobre">Sobre</a>
+                        </li>
+                        <li data-aos="fade-left" data-aos-delay="100">
+                            <a class="fade-page" href="/blog">Blog</a>
+                        </li>
+                        <li data-aos="fade-left" data-aos-delay="100">
+                            <a class="fade-page" href="/contato">Contato</a>
+                        </li>
+                    
+                    
+                        
+                        
+                    </ul>
+                </div>
+                <div class="level-right">
+                    <!-- your list menu here -->
+                    <div class="navbar-menu">
+                        <a href="" data-aos="fade-left" data-aos-delay="400" class="btn btn-dark btn-round">
+                            Nossa loja
+                        </a>
+                    </div>
+                    <div class="mobile-menu">
+                        <!-- your list menu in mobile here -->
+                        <ul>
+                            <li><a class="fade-page" href="Home_1.html">Início</a></li>
+                            <li><a class="fade-page" href="/sobre">Sobre</a></li>
+                            <li><a class="fade-page" href="/blog">Blog</a></li>
+                            <li><a class="fade-page" href="/contato">Contato</a></li>
+                            <li><a class="fade-page" href="http://lojasyorus.com.br">Nossa Loja</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex">
+                        <div class="menu-toggle-icon">
+                            <div class="menu-toggle">
+                                <div class="menu">
+                                    <input type="checkbox" />
+                                    <div class="line-menu"></div>
+                                    <div class="line-menu"></div>
+                                    <div class="line-menu"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="header-wrap">
+                <h2 class="header-title" data-aos="fade-up" data-aos-delay="500">
+                    CONHEÇA A MARCA.
+                </h2>
+                <p class="header-desc" data-aos="fade-up" data-aos-delay="600">
+                    Com uma identidade extremamente feminina, e um trabalho que privilegia qualidade e versatilidade, a loja Yorus foi criada para trazer o melhor em moda,
+                    acompanhando as tendências sem abrir mão da elegância e exclusividade! A nossa missão é vestir as mulheres de amor-próprio, confiança e autoconhecimento,
+                </p>
+                <a href="#" class="btn btn-dark btn-round" data-aos="fade-up" data-aos-delay="700">Conheça
+                    <ion-icon name="arrow-forward"></ion-icon></a>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- =========================== section About-->
+    <section class="section is-sm section-about is-dark section-counter">
+        <div class="container">
+            <div class="row flex vcenter">
+                <div class="col-lg-6">
+                    <div class="section-head">
+                        <h5 class="section-subtitle ">O Lorem Ipsum é um texto</h5>
+                        <h2 class="section-title ">
+                            Com o intuito de fazer elas se sentirem ainda mais lindas e seguras.
+                        </h2>
+                        <p class="section-desc">
+                            em qualquer ocasião.
+                            Além de um atendimento personalizado e experiência de compra, nossa loja possui peças que se 
+                            adaptam a diferentes estilos, desde o tradicional ao glam. São 10 anos de história, e cada coleção 
+                            é pensada para surpreender nos detalhes e na qualidade. 
+                            Venha fazer parte do nosso time de clientes, vista-se bem, vista Yorus!
+                        </p>
+                        <a href="#" class="btn btn-primary btn-round">See our stadies</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="about-img" src="{% static 'assets/images/bg/banner.png' %}" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <!-- =========================== section feautures-->
+    <section class="section is-sm section-grey" id="#collection">
+        <div class="container">
+            <div class="section-head vcenter">
+                <div>
+                    <h5 class="section-subtitle ">Usado por estas indústrias desde o ano de 1500</h5>
+                    <h2 class="section-title ">
+                        Nossas coleções<span class="text-primary">. </span>
+                    </h2>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="row min-30">
+
+
+                    {% if c_list %}
+                    
+                    
+                    
+                    
+
+                        {% for c in c_list %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box has-shadow has-left-icon">
+                                <div class="box-particles2"></div>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="box-icon">
+                                            <ion-icon name="code-download-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#"  data-toggle="modal" data-target="#exampleModal{{ c.id }}"><h3>{{ c.title }}</h3></a>
+                                        
+                                        
+                                        
+                                        <p class="box-desc">
+                                            {{ c.content|truncatechars:150 }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    {% else %}
+
+                        <h6>Desculpe, ainda não temos publicações em nossa coleção :(</h6>
+
+
+                    {% endif %}
+                   
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+  
+    <!-- Modal Loop -->
+    {% for c in c_list %}
+    <div   class="modal fade" id="exampleModal{{ c.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div  class="modal-dialog" role="document">
+        <div class="modal-content mymodal">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{ c.title }}</h5>
+           
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div style="padding: 0px 5px 0px 5px;">
+                <img class="img-fluid" src="{{ c.image.url }}">
+            </div>
+            
+            <div class="modal-body">
+            {{ c.content }}
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+     
+
+
+
+    <!-- =========================== section testimonial -->
+    <section class="section is-lg section-testimonial-x">
+        <div class="container">
+            <div class="row justify-content-xl-center align-items-center">
+                <div class="col-lg-5 col-md-5 order-md-1 order-2  mt-5 mt-lg-0">
+                    <div class="client-wrap">
+                        <img class="icon" src="{% static 'assets/images/bg/testimonial-02.png' %}" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 order-md-2 order-1 ">
+                    <div class="section-head flex between vcenter">
+                        <h2 class="section-title">
+                            É um facto estabelecido de que um leitor<span class="text-primary">.</span>
+                        </h2>
+                    </div>
+                    <p class="client">
+                        <span class="text-primary">Aron Smith</span>, UX Designer
+                    </p>
+                    <p class="client-quote mb-1">
+                        Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações 
+                        de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer parecem suficientemente 
+                        credíveis. Se vai usar uma passagem do Lorem Ipsum, deve ter a certeza que não contém nada de embaraçoso
+                    </p>
+                    <img src="../assets/img/others/sign.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+
+    <!-- =========================== section companies-
+    <div class="container">
+        <section class="section">
+            <div class=" section section-companies has-style1 bg-transparent">
+                <div class="row min-30 flex center">
+                    <div class="col-lg-2 col-md-3  col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/slack.svg' %}" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/github.svg' %}" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/uber.svg' %}" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/envato.svg' %}" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/github.svg' %}" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-6">
+                        <div class="company-item">
+                            <img src="{% static 'assets/images/logos/google.svg' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+-->
+    <!-- =========================== section video-->
+    <section class="section is-lg section-bg">
+        <div>
+            <h5 class="section-subtitle is-center text-white">Ao contrário da crença popular.</h5>
+            <h2 class="section-title is-center text-white">
+                o Lorem Ipsum não é simplesmente texto aleatório.<span class="text-primary">. </span>
+            </h2>
+            <p class="text-white text-center section-desc " style="
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        ">
+                Tem raízes numa peça de literatura clássica em Latim, 
+                de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, 
+                um professor
+            </p>
+        </div>
+        <div class="flex center">
+            <div class="mt-2">
+              <a href="#"> <img src="{% static 'assets/images/icons/play.png' %}" alt="" /></a> 
+              
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================== section team-
+    <section class="section is-lg section-team">
+        <div class="container">
+            <div class="section-head">
+                <h5 class="section-subtitle is-center">Meet our team</h5>
+                <h2 class="section-title is-center ">
+                    We are a smart team of leading digital
+                </h2>
+            </div>
+            <div class="row min-30">
+                
+                
+            
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-box flex center">
+                        <div class="team-thumb">
+                            <img src="{% static 'assets/images/bg/member4.png' %}" alt="" />
+                            <ul class="team-social flex center vcenter">
+                                <li>
+                                    <a href="#"> <i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fab fa-quora"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fab fa-reddit"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4 class="team-name">Marina mojo</h4>
+                        <p class="team-position">developper</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+--> 
+    <!-- =========================== section Blog-->
+    <section class="section is-sm section-blog section-grey">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">
+                     Novidades<span class="text-primary">. </span>
+                </h2>
+            </div>
+            <div class="work-boxes blog-boxes-slick">
+                
+                
+                {% if blog_list %}
+                
+                    
+                    {% for blog in blog_list %}
+                    <div class="">
+                        <div class="post-wrap mt-0">
+                            <a href="#">
+                                <div class="post-img">
+                                    <img src="{{ blog.image.url }}" alt="" />
+                                </div>
+                            </a>
+                            <div class="post-content mb-0">
+                                <div class="post-meta">
+                                    <div class="post-tag"><span class="tag-item">{{ blog.category }}</span></div>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="/detalhes-do-blog/{{ blog.slug }}">{{ blog.title }}</a>
+                                </h3>
+                                <span class="post-author">Por <a href="#" rel="author">{{ request.user.last_name }}</a></span>
+                                <span class="post-date">{{ blog.created }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                {% else %}
+
+                <h6>Desculpe, ainda não temos publicações em nosso blog :(</h6>
+                
+                
+                {% endif %}
+                
+                
+            
+           
+           
+            </div>
+        </div>
+    </section>
+    
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/js.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+
+<!-- =========================== navbar-->
+<nav class="navbar">
+            
+            
+    <div class="container">
+        <div class="flex">
+            <a href="/" class=" text-white navbar-brand flex vcenter" href="#">
+                <img src="{% static 'assets/yorus.svg' %}" width="150" height="80">
+            </a>
+
+            <ul class="navbar-menu">
+                <li data-aos="fade-left" data-aos-delay="100">
+                    <a class="fade-page" href="/">Início</a>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="100">
+                    <a class="fade-page" href="/sobre">Sobre</a>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="100">
+                    <a class="fade-page" href="/blog">Blog</a>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="400"> <a class="fade-page"
+                        href="/contato">Contato</a> 
+                </li>
+            </ul>
+        </div>
+        
+        <div class="level-right">
+            <!-- your list menu here -->
+            <div class="navbar-menu">
+                <a href="" data-aos="fade-left" data-aos-delay="400" class="btn btn-primary btn-round">
+                    Nossa loja
+                </a>
+            </div>
+            <div class="mobile-menu">
+                <!-- your list menu in mobile here -->
+                <ul>
+                    <li><a class="fade-page" href="/">Início</a></li>
+                    <li><a class="fade-page" href="/sobre">Sobre</a></li>
+                    <li><a class="fade-page" href="/blog">Blog</a></li>
+                    <li><a class="fade-page" href="/contato">Contato</a></li>
+                    <li><a class="fade-page" href="https://lojasyorus.com.br">Nossa loja</a></li>
+                </ul>
+            </div>
+            <div class="flex">
+                <div class="menu-toggle-icon">
+                    <div class="menu-toggle">
+                        <div class="menu">
+                            <input type="checkbox" />
+                            <div class="line-menu"></div>
+                            <div class="line-menu"></div>
+                            <div class="line-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</nav>

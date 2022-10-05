@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>olikit - Article</title>
+
+    {% include 'includes/css.html' %}
+    
+</head>
+
+<body>
+
+    <!-- =========================== header-->
+    <header class="header-page">
+        
+        {% include 'includes/header.html' %}
+
+        <div class="container">
+            <div class="header-wrap">
+                <h2 class="header-title" data-aos="fade-up" data-aos-delay="500">{{ blog_detail.title }}</h2>
+            </div>
+        </div>
+    </header>
+    <!-- ================================= Section plans -->
+
+    <!-- ================================= Section plans -->
+    <section class="section sm section-blog2 mt-6">
+        <div class="container">
+            <img class="img-post" src="{{ blog_detail.image.thumb.url }}" alt="{{ blog_detail.title }}">
+            <div class="content-post">
+                <h3 style="margin-bottom: 10px;">{{ blog_detail.subtitle }}</h3>
+                <p class=" color-primary ">{{ blog_detail.content|safe }}</p>
+              
+                <img src="{% static 'images/bg/here.png' %}" alt="{{ blog.detail.subtitle }}">
+              
+            </div>
+            <!-- =============================== leave coment -->
+            <div class="container mb-6">
+                <div class="coments-wrap">
+                    <h3 class="coments-wrap-title">Comentários</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Comentário </label>
+                            <textarea class="textarea w-100" placeholder="Coloque seu comentário aqui"></textarea>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Nome? </label>
+                            <input class="input" type="text" placeholder="Seu nome">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Email </label>
+                            <input class="input" type="text" placeholder="Seu E-mail">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary"> Comentar </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/js.html' %}
+
+
+</body>
+
+</html>
